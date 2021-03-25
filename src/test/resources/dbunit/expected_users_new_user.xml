@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <USER_ACCOUNTS ID='1' LOGIN='usr' password='1111' EMAIL='u@ser.com' FIRST_NAME='John' LAST_NAME='Smith' BIRTHDAY='1980-02-15' ROLE_ID='1'/>
+    <USER_ACCOUNTS ID='2' LOGIN='adm' password='0000' EMAIL='a@dmin.com' FIRST_NAME='Jack' LAST_NAME='Black' BIRTHDAY='1970-01-25' ROLE_ID='2'/>
+    <USER_ACCOUNTS ID='3' LOGIN='sam' password='pass' EMAIL='e@mail' FIRST_NAME='Sam' LAST_NAME='Winchester' BIRTHDAY='1970-11-11' ROLE_ID='1'/>
+</dataset>

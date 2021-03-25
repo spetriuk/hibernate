@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  petriuk-h2db:
+    image: oscarfonts/h2:alpine
+    volumes:
+      - "./db:/opt/h2-data"
+  petriuk-app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - petriuk-h2db
+

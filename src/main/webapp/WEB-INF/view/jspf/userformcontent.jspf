@@ -1,0 +1,69 @@
+<div class="form-group row">
+    <label class="col" for="login">Login</label>
+    <div class="col">
+        <input class="form-control col" type="text" id="login" name="login" value="${user['login']}" <c:if test="${requestScope['javax.servlet.forward.request_uri'] == '/admin/edituser'}">readonly</c:if>>
+        <span class="text-danger">
+            <c:out value="${errors['login']}" /></span>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col" for="password">Password</label>
+    <div class="col">
+        <input class="form-control col" type="password" id="password" name="password" value="${user['password']}">
+        <span class="text-danger">
+            <c:out value="${errors['password']}" /></span>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col" for="password2">Password again</label>
+    <div class="col">
+        <input class="form-control col" type="password" id="password2" name="password2" value="${user['password2']}">
+        <span class="text-danger">
+            <c:out value="${errors['password2']}" /></span>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col" for="login">email</label>
+    <div class="col">
+        <input class="form-control col" type="text" id="email" name="email" value="${user['email']}">
+        <span class="text-danger">
+            <c:out value="${errors['email']}" /></span>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col" for="firstName">First name</label>
+    <div class="col">
+        <input class="form-control col" type="text" id="firstName" name="firstName" value="${user['firstName']}">
+        <span class="text-danger">
+            <c:out value="${errors['firstName']}" /></span>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col" for="lastName">Last Name</label>
+    <div class="col">
+        <input class="form-control col" type="text" id="lastName" name="lastName" value="${user['lastName']}">
+        <span class="text-danger">
+            <c:out value="${errors['lastName']}" /></span>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col" for="birthday">Birth Date</label>
+    <div class="col">
+        <input class="form-control col" type="text" id="birthday" name="birthday" value="${user['birthday']}">
+        <span class="text-danger">
+            <c:out value="${errors['birthday']}" /></span>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col" for="role">Role</label>
+    <div class="col">
+        <select class="form-control col" id="role" name="role">
+            <option value="user" <c:if test="${user['role'] == 'user'}"> selected </c:if>>user</option>
+            <option value="admin" <c:if test="${user['role'] == 'admin'}"> selected </c:if>>admin</option>
+        </select>
+        <span class="text-danger">
+            <c:out value="${errors['role']}" /></span>
+    </div>
+</div>
+<a href="/admin/main" class="btn btn-info" role="button">Cancel</a>
+<button type="submit" class="btn btn-success">Save</button>
